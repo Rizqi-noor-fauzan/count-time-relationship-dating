@@ -1,4 +1,7 @@
 let inputDate = document.getElementById("date");
+const minYear = 2010;
+const minDate = new Date(minYear, 0, 1).toISOString().split("T")[0];
+inputDate.min = minDate;
 inputDate.max = new Date().toISOString().split("T")[0];
 let resultData = document.getElementById("result");
 
@@ -44,15 +47,15 @@ const countRelationship = () => {
   }
 
   resultData.innerHTML = `
-      <h3 class="text-white text-xl mt-4 md:text-2xl">
+       <h3 class="text-white text-lg text-center mt-4 md:text-2xl">
             Your Relationship has lasted for
           </h3>
-          <div class="flex items-center gap-x-2 text-white">
-            <span class="text-yellow-400 text-xl">${yearResult}</span>
+          <div class="flex text-lg items-center gap-x-2 text-white">
+            <span class="text-yellow-400 text-lg md:text-xl">${yearResult}</span>
             Years
-            <span class="text-yellow-400 text-xl">${monthResult}</span>
+            <span class="text-yellow-400 text-lg md:text-xl">${monthResult}</span>
             Months
-            <span class="text-yellow-400 text-xl">${dayResult}</span>
+            <span class="text-yellow-400 text-lg md:text-xl">${dayResult}</span>
             Days ❤️
           </div>
 
