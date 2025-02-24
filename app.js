@@ -68,11 +68,11 @@ const getDaysInMonth = (year, month) => {
 };
 
 const runConfetti = () => {
-  let xPosition = window.innerWidth < 640 ? 0.5 : 0.3; // Jika layar < 640px, confetti lebih ke kiri
+  let xPosition = window.innerWidth < 640 ? 0.5 : 0.3;
 
   confetti({
     particleCount: 100,
     spread: 70,
-    origin: { x: xPosition, y: 0.6 }, // Atur posisi berdasarkan layar
+    origin: { x: xPosition, y: 0.6 }, 
   });
 };
